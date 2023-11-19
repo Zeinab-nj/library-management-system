@@ -1,0 +1,11 @@
+{% extends 'parent/base.html'%}
+{%block title %}Book Status{%endblock%}
+{% block content %} 
+    <h1>وضعیت کتاب</h1>
+    <h2>{{ book.title }}-(مشخصه:{{book.book_id}})</h2>
+    <p>{{ book.description }}</p>
+    <hr>
+   <p>موجودی:{{ book.available}}</p>
+   <p>({{book.author}})(مترجم:{{book.translator}})
+{%endblock%}
+

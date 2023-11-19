@@ -1,0 +1,17 @@
+{% extends 'parent/base.html'%}
+{%block title %} post list {%endblock%}
+{% block content %} 
+    <h1>لیست کتاب ها</h1>
+        <ol style="--length: {{books|length}}" role="list">
+            {% for book in books %}
+            <li style="--i: {{forloop.counter}}">    
+            <h3>
+                    <a href=" {{post.get_absolute_url}}"> {{book.title}}-{{book.author}} </a> 
+            </h3>
+            
+                <p>{{post.description | truncatewords:5}} </p>
+            </li>
+            {% endfor %}
+
+        </ol>
+{%endblock%}
